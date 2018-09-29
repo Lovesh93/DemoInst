@@ -1,0 +1,210 @@
+@charset "UTF-8";
+
+.svg-container {
+    width: 100%;
+    height:auto; overflow:hidden;
+}
+
+canvas {
+    padding-right: 25px;
+    margin: 8px;
+    max-height: 300px;
+}
+
+/* main.css overrides */
+h3.with-line {
+  padding-top: 25px;}
+  
+.btn:hover {
+  -webkit-transform: scale(1);
+  transform: scale(1);}
+  
+.al-msg-center {
+  margin: 13px 15px 0 0;}
+	
+.user-profile {
+  min-width: 150px;}
+  
+@media (max-width: 435px) {
+  .user-profile {
+    min-width: 70px; }
+}
+  
+.horizontal-scroll {
+  overflow-x: auto;
+  overflow-y: visible; }
+
+
+.al-content {
+    padding: 28px 28px 16px 28px;
+}  
+
+/* tags input */
+
+.bootstrap-tagsinput input {
+    background-color: #ffffff;
+    border: 1px solid #cbcbcb;
+    border-radius: 0px;
+    line-height: 22px;
+    font-size: 11px;
+    min-width: 53px;
+}
+
+.bootstrap-tagsinput {
+    color: #666666;
+    background-color: #ffffff;
+    border: 1px solid #cbcbcb;
+    border-radius: 0px;
+    box-shadow: none;
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 26px;
+    width: 100%;
+}
+
+.profile-toggle-link {
+	color: #cecaca; }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 768px) {
+    
+	.al-content {
+    	padding: 16px 16px 8px 16px; }
+}
+
+/* Others */
+
+.action-button {
+  width: 45px; 
+  margin-left: 3px;
+  margin-right: 3px;}
+  
+ .float-right {
+  float: right;}
+
+ .float-left {
+  float: left;}
+  
+ .shift-row-up {
+  margin-top: -56px;}
+  
+ .legend-text {
+  margin-top: 4px;}
+  
+ .top-margin-10 {
+  margin-top: 10px;}
+  
+ .top-margin-20 {
+  margin-top: 20px;}
+  
+ .top-margin-40 {
+  margin-top: 40px;}
+
+ .left-margin-10 {
+  margin-left: 10px;}
+  
+ .right-margin-10 {
+  margin-right: 10px;}
+  
+ .right-margin-15 {
+  margin-right: 15px;}
+  
+ .bottom-margin-20 {
+  margin-bottom: 20px}
+ 
+ .margin-5 {
+ margin:5px;}
+ 
+ .font-size-16 {
+  font-size: 16px;}
+ 
+ .al-user-name {
+    float: right;
+    padding: 0;
+    list-style: none;
+    margin: 13px 10px 0 0;}
+
+.button-spacing {
+	margin: 2px 3px 2px 3px;}
+
+.text-no-wrap {
+	white-space: nowrap;}
+
+h5.with-line {
+  border-bottom: 1px solid #d6d6d6;
+  color: #666666;
+  font-weight: 400;
+  padding-top: 16px;
+  margin-bottom: 14px;
+  line-height: 39px;
+  width: 100%; }
+ 
+h5 {
+	font-weight: 400;
+	padding-top: 16px;
+  	width: 100%; }
+  	
+.min-width-500 {
+	min-width: 500px; }
+	
+.min-width-200 {
+	min-width: 200px; }
+	
+.min-width-100 {
+	min-width: 100px; }
+
+.min-width-150 {
+	min-width: 150px; }
+	
+td input.form-control{
+	margin-top: 2px; }
+
+/* jsTree overrides */
+.jstree-default a.jstree-clicked, .jstree-default a.jstree-hovered {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* amChart configs */
+.monitor-chart {
+	max-height: 300px;}
+
+/* d3 axis */
+
+.axis path, .axis line {
+    fill: none;
+    stroke: rgb(160, 160, 160);
+    shape-rendering: crispEdges;
+}
+
+.axis text{
+	fill: rgb(50, 50, 50);
+}
+
+/* legends */
+.legend-box {
+  float: left;
+  width: 40px;
+  height: 19px;
+  margin: 2px;
+}
+
+/* Panel overrides */
+.panel {
+	border-radius: 0px;
+	padding-bottom: 20px;
+}
+
+/* btn overrides */
+.btn {
+	border-radius: 1px;}
+	
+.btn-raised {
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.35);
+}
+.bootstrap-select.btn-group.open .btn {
+	border-radius: 0px;}
+
+.form-control {
+	border-radius: 0px;}

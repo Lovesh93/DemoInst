@@ -1,0 +1,114 @@
+<div class="row pie-charts">
+  <div class="pie-chart-item-container" ng-repeat="chart in DashboardCtrl.charts">
+    <div ba-panel>
+      <div class="pie-chart-item">
+        <div class="chart" rel="{{ ::chart.color }}" data-percent="60"> <span class="percent"></span> </div>
+        <div class="description">
+          <div>{{ ::chart.description }}</div>
+          <div class="description-stats">{{ ::chart.stats }}</div>
+        </div>
+        <i class="chart-icon i-{{ ::chart.icon }}"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ba-panel ba-panel-class="profile-page">
+	<div class="row">
+		<div class="col-sm-12">
+			<h3 class="with-line">Rent/Sale
+				<span class="float-right">
+					
+					<button data-ng-click="DashboardCtrl.refresh()" type="button"
+					class="btn btn-success btn-sm">Sale</button>
+					<button data-ng-click="DashboardCtrl.refresh()" type="button"
+					class="btn btn-success btn-sm">Rent</button>
+					<button data-ng-click="DashboardCtrl.refresh()" type="button"
+					class="btn btn-default btn-sm"><span class="ion-refresh"></span></button>
+				</span>
+			</h3>
+		</div>
+		<div class="col-sm-12 bottom-margin-20 horizontal-scroll">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Item Code</th>
+						<th>Name</th>
+						<th>Price</th>
+						<th>Quantity</th>
+						<th>Discount</th>
+						<th>
+							<button class="action-button btn btn-xs btn-success" data-ng-click="DashboardCtrl.addOrder()" title="Add">
+								<span class="fa fa-plus"></span>
+							</button>
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-ng-repeat="attribute in DashboardCtrl.orders">
+						<td data-ng-bind="$index + 1"></td>
+						<td>
+							<select
+								name="monitorType" 
+								class="form-control selectpicker with-search" data-size="7"
+								data-live-search="true" title="Search Item Code"
+								selectpicker
+								data-ng-model="attribute.item.code"
+								data-ng-options="code.code as code.code for code in DashboardCtrl.item.codes"
+								data-ng-change="DashboardCtrl.ItemCodeSelected(DashboardCtrl.newOrder.item.code)" required>
+							</select>
+						</td>
+						<td>
+							<select
+								name="monitorType" 
+								class="form-control selectpicker with-search" data-size="7"
+								data-live-search="true" title="Search Item Name"
+								selectpicker
+								data-ng-model="attribute.item.name"
+								data-ng-options="item.name as item.name for item in DashboardCtrl.item.names"
+								data-ng-change="DashboardCtrl.ItemNameSelected(DashboardCtrl.newOrder.item.name)" required>
+							</select>
+						</td>
+						<td>
+							<input type="number"
+								name="price_{{$index}}"
+								class="form-control min-width-100" data-ng-model="DashboardCtrl.newOrder.item.price" disabled
+								placeholder="price" required>
+						</td>
+						<td>
+							<input type="number"
+								name="quantity_{{$index}}"
+								class="form-control min-width-100" data-ng-model="DashboardCtrl.newOrder.item.quantity"
+								placeholder="quantity" required>
+						</td>
+						<td>
+							<input type="number"
+								name="discount_{{$index}}"
+								class="form-control min-width-100" data-ng-model="DashboardCtrl.newOrder.item.discount"
+								placeholder="discount in %">
+						</td>
+						<td>
+							<button class="action-button btn btn-xs btn-danger" data-ng-click="DashboardCtrl.deleteOrder($index)" title="Delete">
+								<span class="fa fa-remove"></span>
+							</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<div data-ng-hide="DashboardCtrl.orders.length" align="center" class="top-margin-20">
+				No order to be placed
+			</div>
+		</div>
+		<!-- <div class="col-sm-12 bottom-margin-20">
+			<div class="button-wrapper">
+				<button type="button" class="btn btn-danger btn-raised button-spacing" data-ui-sref="rules">Cancel</button>
+				<button type="submit" loading-button text="Add" show-loading="AddMonitorCtrl.addingRule" 
+					class="btn btn-primary btn-raised button-spacing"
+					data-ng-disabled="AddMonitorCtrl.addingRule"
+					data-ng-click="AddRuleCtrl.addNewRule();">Add</button>
+			</div>
+		</div> -->
+	</div>
+</div>
