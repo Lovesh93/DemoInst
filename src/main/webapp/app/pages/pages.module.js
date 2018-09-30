@@ -7,7 +7,8 @@
 
   angular.module('ECommerce.pages', [
     'ui.router',
-    'ECommerce.pages.dashboard',    
+    'ECommerce.pages.dashboard',   
+    'ECommerce.pages.profile',
   ])
       .config(routeConfig);
 
